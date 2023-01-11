@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Roster from './Roster'
-import "./App.css"
+import "./App.css";
 
 
 const students = [

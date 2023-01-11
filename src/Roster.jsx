@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Scores from "./Scores";
+import Scores from "./Student";
+
 
 export default class Roster extends Component {
     render() {

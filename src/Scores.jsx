@@ -1,21 +1,25 @@
-import React, { Component } from "react";
-import StudentScores from "./StudentScores";
 
 
-export default class Scores extends Component {
+import { Component } from "react";
+
+
+export default class Scores extends Component{
+
     render() {
-        return (
-            <div>
-                <h1>{this.props.name}</h1>
-                <p>{this.props.bio}</p>
-                
+        
+        const scoress = this.props.scores.map((score, idx) => {
+            return(
+                <div key={idx}>
+                    <p>{score.date}</p>
+                    <p>{score.score}</p>
+                </div>
+            )
+        })
 
-                <StudentScores 
-                    scores={this.props.scores}
-                />
-
-
-            </div>
+        return(
+            <>
+            {scoress}
+            </>
         )
     }
 }
